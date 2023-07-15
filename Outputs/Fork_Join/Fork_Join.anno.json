@@ -1,0 +1,52 @@
+[
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Fork_Join|DelayElement",
+    "duplicate":"~Fork_Join|Fork_Join/Fork:Fork/ACG:ACG/full_wire_PRO_Dreq:DelayElement",
+    "index":0.0
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Fork_Join|DelayElement_1",
+    "duplicate":"~Fork_Join|Fork_Join/Fork:Fork/ACG:ACG/fire_o_Dfire:DelayElement_1",
+    "index":0.1111111111111111
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Fork_Join|DelayElement_2",
+    "duplicate":"~Fork_Join|Fork_Join/Join:Join/ACG_Join:ACG_1/full_wire_PRO_Dreq:DelayElement",
+    "index":0.4444444444444444
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Fork_Join|DelayElement_3",
+    "duplicate":"~Fork_Join|Fork_Join/Join:Join/ACG_Join:ACG_1/full_wire_PRO_Dreq_1:DelayElement",
+    "index":0.5555555555555556
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Fork_Join|DelayElement_4",
+    "duplicate":"~Fork_Join|Fork_Join/Join:Join/ACG_Join:ACG_1/fire_o_Dfire:DelayElement_1",
+    "index":0.6666666666666666
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxInlineAnno",
+    "target":"Fork_Join.DelayElement_1",
+    "name":"DelayElement.v",
+    "text":"`timescale 1ns / 1ps\n\nmodule DelayElement\n#(parameter DelayValue = 1)\n(\n\tinput\twire\tI,\n\toutput\twire\tZ\n    );\n\t\n\tassign\t#(0.2*DelayValue)\tZ = I;\n\nendmodule\n"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxInlineAnno",
+    "target":"Fork_Join.DelayElement",
+    "name":"DelayElement.v",
+    "text":"`timescale 1ns / 1ps\n\nmodule DelayElement\n#(parameter DelayValue = 1)\n(\n\tinput\twire\tI,\n\toutput\twire\tZ\n    );\n\t\n\tassign\t#(0.2*DelayValue)\tZ = I;\n\nendmodule\n"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"Outputs/Fork_Join"
+  }
+]

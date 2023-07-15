@@ -1,0 +1,22 @@
+[
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxInlineAnno",
+    "target":"Accumulator.DelayElement_1",
+    "name":"DelayElement.v",
+    "text":"`timescale 1ns / 1ps\n\nmodule DelayElement\n#(parameter DelayValue = 1)\n(\n\tinput\twire\tI,\n\toutput\twire\tZ\n    );\n\t\n\tassign\t#(0.2*DelayValue)\tZ = I;\n\nendmodule\n"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxInlineAnno",
+    "target":"Accumulator.DelayElement",
+    "name":"DelayElement.v",
+    "text":"`timescale 1ns / 1ps\n\nmodule DelayElement\n#(parameter DelayValue = 1)\n(\n\tinput\twire\tI,\n\toutput\twire\tZ\n    );\n\t\n\tassign\t#(0.2*DelayValue)\tZ = I;\n\nendmodule\n"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"Outputs/Accumulator"
+  }
+]

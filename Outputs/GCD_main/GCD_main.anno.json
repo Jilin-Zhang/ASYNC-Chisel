@@ -1,0 +1,52 @@
+[
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~GCD_main|DelayElement",
+    "duplicate":"~GCD_main|GCD_main/CL_GCD:CL_GCD/UAC_CL:ACG/full_wire_PRO_Dreq:DelayElement",
+    "index":0.0
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~GCD_main|DelayElement_1",
+    "duplicate":"~GCD_main|GCD_main/CL_GCD:CL_GCD/UAC_CL:ACG/fire_o_Dfire:DelayElement_1",
+    "index":0.1111111111111111
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~GCD_main|DelayElement_2",
+    "duplicate":"~GCD_main|GCD_main/MUX_GCD:MUX_GCD/UAC_MUX:ACG_1/full_wire_PRO_Dreq:DelayElement",
+    "index":0.4444444444444444
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~GCD_main|DelayElement_3",
+    "duplicate":"~GCD_main|GCD_main/MUX_GCD:MUX_GCD/UAC_MUX:ACG_1/full_wire_PRO_Dreq_1:DelayElement",
+    "index":0.5555555555555556
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~GCD_main|DelayElement_4",
+    "duplicate":"~GCD_main|GCD_main/MUX_GCD:MUX_GCD/UAC_MUX:ACG_1/fire_o_Dfire:DelayElement_1",
+    "index":0.6666666666666666
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxInlineAnno",
+    "target":"GCD_main.DelayElement_1",
+    "name":"DelayElement.v",
+    "text":"`timescale 1ns / 1ps\n\nmodule DelayElement\n#(parameter DelayValue = 1)\n(\n\tinput\twire\tI,\n\toutput\twire\tZ\n    );\n\t\n\tassign\t#(0.2*DelayValue)\tZ = I;\n\nendmodule\n"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxInlineAnno",
+    "target":"GCD_main.DelayElement",
+    "name":"DelayElement.v",
+    "text":"`timescale 1ns / 1ps\n\nmodule DelayElement\n#(parameter DelayValue = 1)\n(\n\tinput\twire\tI,\n\toutput\twire\tZ\n    );\n\t\n\tassign\t#(0.2*DelayValue)\tZ = I;\n\nendmodule\n"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"Outputs/GCD_main"
+  }
+]

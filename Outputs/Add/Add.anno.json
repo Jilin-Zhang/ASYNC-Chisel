@@ -1,0 +1,34 @@
+[
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Add|DelayElement",
+    "duplicate":"~Add|Add/ACG:ACG/full_wire_PRO_Dreq:DelayElement",
+    "index":0.0
+  },
+  {
+    "class":"firrtl.transforms.DedupedResult",
+    "original":"~Add|DelayElement_1",
+    "duplicate":"~Add|Add/ACG:ACG/full_wire_PRO_Dreq_1:DelayElement",
+    "index":0.25
+  },
+  {
+    "class":"firrtl.EmitCircuitAnnotation",
+    "emitter":"firrtl.VerilogEmitter"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxInlineAnno",
+    "target":"Add.DelayElement_2",
+    "name":"DelayElement.v",
+    "text":"`timescale 1ns / 1ps\n\nmodule DelayElement\n#(parameter DelayValue = 1)\n(\n\tinput\twire\tI,\n\toutput\twire\tZ\n    );\n\t\n\tassign\t#(0.2*DelayValue)\tZ = I;\n\nendmodule\n"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxInlineAnno",
+    "target":"Add.DelayElement",
+    "name":"DelayElement.v",
+    "text":"`timescale 1ns / 1ps\n\nmodule DelayElement\n#(parameter DelayValue = 1)\n(\n\tinput\twire\tI,\n\toutput\twire\tZ\n    );\n\t\n\tassign\t#(0.2*DelayValue)\tZ = I;\n\nendmodule\n"
+  },
+  {
+    "class":"firrtl.transforms.BlackBoxTargetDirAnno",
+    "targetDir":"Outputs/Add"
+  }
+]
