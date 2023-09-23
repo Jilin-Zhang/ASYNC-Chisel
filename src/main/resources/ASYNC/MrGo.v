@@ -10,6 +10,6 @@ module MrGo(
 	assign  NAND0 = ~(fire & NAND1);
 	assign  NAND1 = ~(En & NAND0);
 
-	assign  Out = NAND0;
+	assign  Out = ~NAND0;
 
 endmodule
